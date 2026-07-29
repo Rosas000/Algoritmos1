@@ -1,0 +1,352 @@
+EJ1
+ Scanner teclado = new Scanner (System.in);
+        int B, A, AR,P;
+       
+        System.out.println("Digite su B");
+        B=teclado.nextInt();
+        System.out.println("Digite su A");
+        A=teclado.nextInt();
+       
+        AR = B*A;
+        P = 2*(A+B);
+       
+        System.out.println("El area es" + AR);
+        System.out.println("El perimetro es" + P);
+EJ2
+Scanner teclado = new Scanner (System.in);
+        double VP, VI, TT;
+       
+        System.out.println("Digite el valor de su producto");
+        VP=teclado.nextInt();
+       
+        System.out.println("valor antes del iva " + VP);
+       
+        VI = VP*0.19;
+       
+        System.out.println("valor del iva " + VI);
+       
+        TT = VP + VI;
+       
+        System.out.println("El area total a pagar es " + TT);
+EJ3
+Scanner teclado = new Scanner (System.in);
+        double P1, P2, PF, NTF;
+       
+        System.out.println("Digite su P1");
+        P1=teclado.nextInt();
+        System.out.println("Digite su P2");
+        P2=teclado.nextInt();
+        System.out.println("Digite su PF");
+        PF=teclado.nextInt();
+       
+        NTF = (P1*0.30) + (P2*0.30) + (PF*0.40);
+   
+       
+        System.out.println("La nota final es " + NTF);
+EJ4
+Scanner teclado = new Scanner (System.in);
+        double HT, VH, TT, DS, DP, SMR, SN;
+       
+        System.out.println("Digite su HT");
+        HT=teclado.nextInt();
+        System.out.println("Digite su VH");
+        VH=teclado.nextInt();
+       
+        TT = HT * VH;
+       
+        System.out.println("Su salario bruto es " + TT);
+       
+        DS = TT * 0.04;
+       
+        System.out.println("Descuento de la salud " + DS);
+       
+        DP = TT * 0.04;
+       
+        System.out.println("Descuento de la salud " + DP);
+       
+        SN = TT - DS - DP;
+       
+        System.out.println("Su salario neto es " + SN);
+EJ5
+ Scanner teclado = new Scanner (System.in);
+       
+      double C, F, K;  
+     
+     System.out.println("Ingrese su grado");
+     C = teclado.nextInt();
+     F = (C*1.8)+32;
+     
+      System.out.println("C = " + F);
+     
+     K = C + 273.15;
+     
+     System.out.println("C = " + K);
+EJ6
+VScanner teclado = new Scanner (System.in);
+        int DN;
+       
+        System.out.println("Digite su numero");
+        DN=teclado.nextInt();
+       
+        if (DN > 0){
+           
+            System.out.println("Su numero es positivo");
+        }
+        else if (DN < 0){
+           
+            System.out.println("Su numero es negativo");
+         
+                    }
+            else {
+                    System.out.println("Su numero es 0");
+        }
+EJ7
+Scanner teclado = new Scanner (System.in);
+        int ED;
+        String EB;
+        System.out.println("Digite su edad");
+        ED=teclado.nextInt();
+       
+        if (ED < 12){
+            System.out.println("Eres un niÃ±o");
+        }
+        else if(ED < 19){
+            System.out.println("Eres un adolescente");
+        }
+        else if(ED < 59){
+            System.out.println("Eres un adulto");
+        }
+        else if(ED < 100){
+            System.out.println("Eres un adulto mayor");
+        }
+EJ8
+Scanner teclado = new Scanner (System.in);
+       double producto, descuento, total;
+       
+       System.out.println("Digite el valor de su compra");
+       producto=teclado.nextInt();
+       
+       if (producto > 200000){
+           descuento=producto*0.10;
+           total=producto-descuento;
+           System.out.println("Su valor total es "+ total);
+       }
+       else {
+           System.out.println("Su valor total es " + producto);
+       }
+EJ9
+Scanner teclado = new Scanner (System.in);
+       int numero1, numero2;
+       System.out.println("Digite numero1");
+       numero1=teclado.nextInt();
+       
+       System.out.println("Digite numero2");
+       numero2=teclado.nextInt();
+       
+       if(numero1 > numero2){
+           System.out.println("Numero mayor es " + numero1);
+       }
+       else if(numero2 > numero1){
+           System.out.println("Numero mayor es " + numero2);
+       }
+       else {
+           System.out.println("Ambos numeros son iguales");
+       }
+EJ10
+ Scanner teclado = new Scanner(System.in);
+
+        int año;
+
+        System.out.print("Digite un año: ");
+        año = teclado.nextInt();
+
+        if (año % 400 == 0) {
+            System.out.println("El año es bisiesto.");
+        } else if (año % 100 == 0) {
+            System.out.println("El año no es bisiesto.");
+        } else if (año % 4 == 0) {
+            System.out.println("El año es bisiesto.");
+        } else {
+            System.out.println("El año no es bisiesto.");
+        }
+EJ11
+ for (int i = 0; i < 101; i++) {
+            System.out.println(i);
+        }
+EJ12
+for (int i = 0; i < 201; i++) {
+            if (i % 2 == 0){
+                System.out.println("el numero es par" + i);
+            }
+            else{
+                System.out.println("el numero es impar" + i);
+            }
+EJ13
+int suma=0;
+        for (int i = 0; i < 101; i++) {
+            suma= suma+i;
+            System.out.println(suma);
+    }
+EJ14
+ Scanner teclado= new Scanner (System.in);
+        int numeros, promedio;
+        int suma=0;
+        for (int i = 1; i < 11; i++) {
+            System.out.println("digite numero "+ i );
+            numeros=teclado.nextInt();  
+            suma=suma + numeros;          
+        }      
+            System.out.println("la suma de los numeros es " + suma);
+            promedio = suma/10;
+            System.out.println("El promedio es " + promedio);
+    }
+EJ15
+ Scanner teclado = new Scanner(System.in);
+
+        int numero;
+        int suma = 0;
+        int cantidad = 0;
+        int promedio;
+
+        for (;;) {
+
+            System.out.print("Digite un número (0 para terminar): ");
+            numero = teclado.nextInt();
+
+            if (numero == 0) {
+                break;
+            }
+
+            suma = suma + numero;
+            cantidad = cantidad + 1;
+        }
+
+        promedio = suma / cantidad;
+
+        System.out.println("Cantidad de números: " + cantidad);
+        System.out.println("Suma: " + suma);
+        System.out.println("Promedio: " + promedio);
+
+        }
+E16
+Scanner teclado = new Scanner (System.in);
+       
+       int [] array= new int [11];
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(i);
+        }
+EJ17
+Scanner teclado = new Scanner (System.in);
+       
+       int [] array={7,12,8,10,9,24,22,17,21,14,15,3,1,77,95};
+       int mayor = array[0];
+       int menor = array[0];
+        for (int i = 0; i < array.length; i++) {
+           
+            if (array[i] > mayor){
+                mayor = array[i];
+            }
+            if (array[i] < menor){
+                menor = array[i];
+            }
+        }
+            System.out.println("El numero mayor es: "+ mayor);
+            System.out.println("El numero menor es: "+ menor);
+           
+        }
+EJ18
+ int [] array={12,23,45,55,12,1,4,5,8,7,23,24,26,54,23,77,89,95,90,92};
+       int promedio;
+       int suma = 0;
+        for (int i = 0; i < array.length; i++) {
+            if(array[i] %2==0){
+            System.out.println("Numero par: "+ array[i]);
+        }
+            else{
+                System.out.println("Numero impar: "+ array[i]);
+            }
+            suma=suma + array[i];
+           
+    }
+       promedio=suma/array.length;
+       System.out.println("El promedio es: "+ promedio);
+}
+EJ19
+ Scanner teclado = new Scanner (System.in);
+       
+        double[] notas = new double[30];
+        double mayor;
+        double menor;
+        double suma = 0;
+        double promedio;
+
+        int aprobados = 0;
+        int reprobados = 0;
+
+        for (int i = 0; i < 30; i++) {
+            System.out.print("Digite la nota del estudiante " + (i + 1) + ": ");
+            notas[i] = teclado.nextDouble();
+        }
+
+        mayor = notas[0];
+        menor = notas[0];
+
+        for (int i = 0; i < 30; i++) {
+
+            if (notas[i] > mayor) {
+                mayor = notas[i];
+            }
+
+            if (notas[i] < menor) {
+                menor = notas[i];
+            }
+
+            suma = suma + notas[i];
+
+            if (notas[i] >= 3.0) {
+                aprobados = aprobados + 1;
+            } else {
+                reprobados = reprobados + 1;
+            }
+
+        }
+
+        promedio = suma / 30;
+
+        System.out.println("La nota mayor es: " + mayor);
+        System.out.println("La nota menor es: " + menor);
+        System.out.println("El promedio es: " + promedio);
+        System.out.println("Cantidad de aprobados: " + aprobados);
+        System.out.println("Cantidad de reprobados: " + reprobados);
+    }
+EJ20
+Scanner teclado = new Scanner(System.in);
+
+        int[] arreglo = new int[25];
+        int numero;
+        boolean encontrado = false;
+
+        
+        for (int i = 0; i < 25; i++) {
+            System.out.print("Digite el número " + (i + 1) + ": ");
+            arreglo[i] = teclado.nextInt();
+        }
+
+        
+        System.out.print("Digite el número que desea buscar: ");
+        numero = teclado.nextInt();
+
+       
+        for (int i = 0; i < 25; i++) {
+
+            if (arreglo[i] == numero) {
+                System.out.println("El número existe.");
+                System.out.println("Se encuentra en la posición: " + i);
+                encontrado = true;
+            }
+
+        }
+
+        if (encontrado == false) {
+            System.out.println("El número no existe.");
+    }
