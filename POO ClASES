@@ -1,0 +1,545 @@
+EJ1
+ public class Principal1 {
+ public static void main(String[] args) {
+
+        Libro libro1 = new Libro();
+
+        libro1.titulo = "Cien años de soledad";
+        libro1.autor = "Gabriel García Márquez";
+        libro1.numeroPaginas = 496;
+
+        libro1.mostrarInformacion();
+
+    }
+
+}
+public class Libro {
+    
+    String titulo;
+    String autor;
+    int numeroPaginas;
+
+    public void mostrarInformacion() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Autor: " + autor);
+        System.out.println("Número de páginas: " + numeroPaginas);
+    }
+
+}
+EJ2
+public class Principal2 {
+
+     public static void main(String[] args) {
+
+        Estudiante estudiante1 = new Estudiante("Juan Pérez", 16, "11°");
+
+        estudiante1.mostrarInformacion();
+
+    }
+
+}
+public class Estudiante {
+    String nombre;
+    int edad;
+    String grado;
+
+    
+    public Estudiante(String nombre, int edad, String grado) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.grado = grado;
+    }
+
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad);
+        System.out.println("Grado: " + grado);
+    }
+
+}
+EJ3
+public class Producto {
+
+    String nombre;
+    double precio;
+    int cantidad;
+
+    public Producto(String nombre, double precio, int cantidad) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = cantidad;
+    }
+
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Precio: $" + precio);
+        System.out.println("Cantidad: " + cantidad);
+    }
+
+    public double calcularTotalInventario() {
+        return precio * cantidad;
+    }
+}
+Principal.java
+public class Principal {
+    public static void main(String[] args) {
+        Producto producto1 = new Producto("Arroz",2500,10);
+        producto1.mostrarInformacion();
+        System.out.println("Valor total: $" + producto1.calcularTotalInventario());
+    }
+}
+EJ4
+public class CuentaBancaria {
+
+    String numeroCuenta;
+    String titular;
+    double saldo;
+
+    public CuentaBancaria(String numeroCuenta,String titular,double saldo){
+        this.numeroCuenta=numeroCuenta;
+        this.titular=titular;
+        this.saldo=saldo;
+    }
+
+    public void mostrarInformacion(){
+        System.out.println("Cuenta: "+numeroCuenta);
+        System.out.println("Titular: "+titular);
+        System.out.println("Saldo: $"+saldo);
+    }
+
+    public void depositar(double dinero){
+        saldo=saldo+dinero;
+    }
+
+    public void retirar(double dinero){
+        saldo=saldo-dinero;
+    }
+}
+Principal.java
+public class Principal{
+    public static void main(String[] args){
+        CuentaBancaria cuenta1=new CuentaBancaria("123456","Juan",500000);
+        cuenta1.mostrarInformacion();
+        cuenta1.depositar(100000);
+        cuenta1.retirar(50000);
+        cuenta1.mostrarInformacion();
+    }
+}
+EJ5
+public class Vehiculo {
+
+    String placa;
+    String marca;
+    String modelo;
+    double combustible;
+    boolean encendido;
+
+    // Constructor
+    public Vehiculo(String placa, String marca, String modelo, double combustible) {
+        this.placa = placa;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.combustible = combustible;
+        this.encendido = false;
+    }
+
+    public void mostrarInformacion() {
+        System.out.println("Placa: " + placa);
+        System.out.println("Marca: " + marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Combustible: " + combustible + " litros");
+        System.out.println("Encendido: " + encendido);
+    }
+
+    public void encender() {
+        encendido = true;
+        System.out.println("El vehículo fue encendido.");
+    }
+
+    public void apagar() {
+        encendido = false;
+        System.out.println("El vehículo fue apagado.");
+    }
+
+    public void recorrer(double kilometros) {
+        combustible = combustible - (kilometros * 0.1);
+        System.out.println("Se recorrieron " + kilometros + " km.");
+    }
+
+}
+public class Principal {
+
+    public static void main(String[] args) {
+
+        Vehiculo vehiculo1 = new Vehiculo("ABC123", "Toyota", "Corolla", 40);
+
+        vehiculo1.mostrarInformacion();
+
+        vehiculo1.encender();
+
+        vehiculo1.recorrer(50);
+
+        vehiculo1.apagar();
+
+        System.out.println("\nInformación final:");
+
+        vehiculo1.mostrarInformacion();
+
+    }
+
+}
+EJ6
+public class Empleado {
+
+    String nombre;
+    String cargo;
+    double salarioBase;
+    int horasExtras;
+
+    // Constructor
+    public Empleado(String nombre, String cargo, double salarioBase, int horasExtras) {
+        this.nombre = nombre;
+        this.cargo = cargo;
+        this.salarioBase = salarioBase;
+        this.horasExtras = horasExtras;
+    }
+
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Cargo: " + cargo);
+        System.out.println("Salario base: $" + salarioBase);
+        System.out.println("Horas extras: " + horasExtras);
+    }
+
+    public double calcularSalarioFinal() {
+        double pagoHorasExtras = horasExtras * 20000;
+        return salarioBase + pagoHorasExtras;
+    }
+
+}
+public class Principal {
+
+    public static void main(String[] args) {
+
+        Empleado empleado1 = new Empleado("Carlos Pérez", "Administrador", 1800000, 8);
+
+        empleado1.mostrarInformacion();
+
+        System.out.println("Salario final: $" + empleado1.calcularSalarioFinal());
+
+    }
+
+}
+EJ7
+public class Mascota {
+
+    String nombre;
+    String especie;
+    int edad;
+    double peso;
+    String propietario;
+
+    // Constructor
+    public Mascota(String nombre, String especie, int edad, double peso, String propietario) {
+
+        this.nombre = nombre;
+        this.especie = especie;
+        this.propietario = propietario;
+
+        if (edad >= 0) {
+            this.edad = edad;
+        } else {
+            this.edad = 0;
+        }
+
+        if (peso >= 0) {
+            this.peso = peso;
+        } else {
+            this.peso = 0;
+        }
+
+    }
+
+    public void mostrarInformacion() {
+
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Especie: " + especie);
+        System.out.println("Edad: " + edad + " años");
+        System.out.println("Peso: " + peso + " kg");
+        System.out.println("Propietario: " + propietario);
+
+    }
+
+    public void registrarConsulta() {
+
+        System.out.println("La mascota asistió a una consulta médica.");
+
+    }
+
+}
+public class Principal {
+
+    public static void main(String[] args) {
+
+        Mascota mascota1 = new Mascota("Max", "Perro", 5, 18.5, "Carlos Pérez");
+
+        mascota1.mostrarInformacion();
+
+        mascota1.registrarConsulta();
+
+    }
+
+}
+EJ8
+public class Plato {
+
+    String nombre;
+    double precio;
+
+    // Constructor
+    public Plato(String nombre, double precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
+}
+public class Pedido {
+
+    int numero;
+    String fecha;
+    String cliente;
+    Plato plato;
+
+    // Constructor
+    public Pedido(int numero, String fecha, String cliente, Plato plato) {
+
+        this.numero = numero;
+        this.fecha = fecha;
+        this.cliente = cliente;
+        this.plato = plato;
+
+    }
+
+    public void mostrarInformacion() {
+
+        System.out.println("Número del pedido: " + numero);
+        System.out.println("Fecha: " + fecha);
+        System.out.println("Cliente: " + cliente);
+
+        System.out.println("Plato: " + plato.nombre);
+        System.out.println("Precio: $" + plato.precio);
+
+    }
+
+}
+public class Principal {
+
+    public static void main(String[] args) {
+
+        Plato plato1 = new Plato("Hamburguesa", 25000);
+
+        Pedido pedido1 = new Pedido(1, "05/08/2026", "Juan Pérez", plato1);
+
+        pedido1.mostrarInformacion();
+
+    }
+
+}
+EJ9
+public class Estudiante {
+
+    String nombre;
+    String codigo;
+
+    // Constructor
+    public Estudiante(String nombre, String codigo) {
+
+        this.nombre = nombre;
+        this.codigo = codigo;
+
+    }
+
+}
+public class Asignatura {
+
+    String nombre;
+    int creditos;
+
+    // Constructor
+    public Asignatura(String nombre, int creditos) {
+
+        this.nombre = nombre;
+        this.creditos = creditos;
+
+    }
+
+}
+public class Inscripcion {
+
+    Estudiante estudiante;
+    Asignatura asignatura;
+
+    // Constructor
+    public Inscripcion(Estudiante estudiante, Asignatura asignatura) {
+
+        this.estudiante = estudiante;
+        this.asignatura = asignatura;
+
+    }
+
+    public void mostrarInformacion() {
+
+        System.out.println("----- INSCRIPCIÓN -----");
+
+        System.out.println("Nombre del estudiante: " + estudiante.nombre);
+        System.out.println("Código: " + estudiante.codigo);
+
+        System.out.println("Asignatura: " + asignatura.nombre);
+        System.out.println("Créditos: " + asignatura.creditos);
+
+    }
+
+}
+public class Principal {
+
+    public static void main(String[] args) {
+
+        Estudiante estudiante1 = new Estudiante("Juan Pérez", "2026001");
+
+        Asignatura asignatura1 = new Asignatura("Programación Orientada a Objetos", 4);
+
+        Inscripcion inscripcion1 = new Inscripcion(estudiante1, asignatura1);
+
+        inscripcion1.mostrarInformacion();
+
+    }
+
+}
+EJ10
+public class Cliente {
+
+    String nombre;
+    String correo;
+    String identificacion;
+
+    // Constructor
+    public Cliente(String nombre, String correo, String identificacion) {
+
+        this.nombre = nombre;
+        this.correo = correo;
+        this.identificacion = identificacion;
+
+    }
+
+}
+public class Producto {
+
+    String nombre;
+    double precio;
+    int cantidad;
+
+    // Constructor
+    public Producto(String nombre, double precio, int cantidad) {
+
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = cantidad;
+
+    }
+
+    public double calcularSubtotal() {
+
+        return precio * cantidad;
+
+    }
+
+}
+import java.util.ArrayList;
+
+public class Compra {
+
+    int numero;
+    String fecha;
+    Cliente cliente;
+    ArrayList<Producto> productos;
+
+    // Constructor
+    public Compra(int numero, String fecha, Cliente cliente) {
+
+        this.numero = numero;
+        this.fecha = fecha;
+        this.cliente = cliente;
+        productos = new ArrayList<>();
+
+    }
+
+    public void agregarProducto(Producto producto) {
+
+        productos.add(producto);
+
+    }
+
+    public double calcularTotal() {
+
+        double total = 0;
+
+        for (Producto producto : productos) {
+
+            total = total + producto.calcularSubtotal();
+
+        }
+
+        return total;
+
+    }
+
+    public void mostrarInformacion() {
+
+        System.out.println("Número de compra: " + numero);
+        System.out.println("Fecha: " + fecha);
+
+        System.out.println("Cliente: " + cliente.nombre);
+        System.out.println("Correo: " + cliente.correo);
+        System.out.println("Identificación: " + cliente.identificacion);
+
+        System.out.println("\nProductos:");
+
+        for (Producto producto : productos) {
+
+            System.out.println("- " + producto.nombre);
+            System.out.println("  Precio: $" + producto.precio);
+            System.out.println("  Cantidad: " + producto.cantidad);
+            System.out.println("  Subtotal: $" + producto.calcularSubtotal());
+
+        }
+
+        System.out.println("\nTotal a pagar: $" + calcularTotal());
+
+    }
+
+}
+public class Principal {
+
+    public static void main(String[] args) {
+
+        Cliente cliente1 = new Cliente(
+                "Juan Pérez",
+                "juan@gmail.com",
+                "123456789"
+        );
+
+        Producto producto1 = new Producto("Mouse", 50000, 2);
+        Producto producto2 = new Producto("Teclado", 80000, 1);
+        Producto producto3 = new Producto("Monitor", 700000, 1);
+
+        Compra compra1 = new Compra(1, "05/08/2026", cliente1);
+
+        compra1.agregarProducto(producto1);
+        compra1.agregarProducto(producto2);
+        compra1.agregarProducto(producto3);
+
+        compra1.mostrarInformacion();
+
+    }
+
+}
