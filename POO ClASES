@@ -134,7 +134,7 @@ public class Vehiculo {
     double combustible;
     boolean encendido;
 
-    // Constructor
+   
     public Vehiculo(String placa, String marca, String modelo, double combustible) {
         this.placa = placa;
         this.marca = marca;
@@ -196,7 +196,7 @@ public class Empleado {
     double salarioBase;
     int horasExtras;
 
-    // Constructor
+    
     public Empleado(String nombre, String cargo, double salarioBase, int horasExtras) {
         this.nombre = nombre;
         this.cargo = cargo;
@@ -239,7 +239,7 @@ public class Mascota {
     double peso;
     String propietario;
 
-    // Constructor
+    
     public Mascota(String nombre, String especie, int edad, double peso, String propietario) {
 
         this.nombre = nombre;
@@ -296,7 +296,7 @@ public class Plato {
     String nombre;
     double precio;
 
-    // Constructor
+    
     public Plato(String nombre, double precio) {
         this.nombre = nombre;
         this.precio = precio;
@@ -310,7 +310,7 @@ public class Pedido {
     String cliente;
     Plato plato;
 
-    // Constructor
+    
     public Pedido(int numero, String fecha, String cliente, Plato plato) {
 
         this.numero = numero;
@@ -351,7 +351,7 @@ public class Estudiante {
     String nombre;
     String codigo;
 
-    // Constructor
+    
     public Estudiante(String nombre, String codigo) {
 
         this.nombre = nombre;
@@ -365,7 +365,7 @@ public class Asignatura {
     String nombre;
     int creditos;
 
-    // Constructor
+   
     public Asignatura(String nombre, int creditos) {
 
         this.nombre = nombre;
@@ -379,7 +379,6 @@ public class Inscripcion {
     Estudiante estudiante;
     Asignatura asignatura;
 
-    // Constructor
     public Inscripcion(Estudiante estudiante, Asignatura asignatura) {
 
         this.estudiante = estudiante;
@@ -422,7 +421,7 @@ public class Cliente {
     String correo;
     String identificacion;
 
-    // Constructor
+    
     public Cliente(String nombre, String correo, String identificacion) {
 
         this.nombre = nombre;
@@ -438,7 +437,7 @@ public class Producto {
     double precio;
     int cantidad;
 
-    // Constructor
+    
     public Producto(String nombre, double precio, int cantidad) {
 
         this.nombre = nombre;
@@ -463,7 +462,7 @@ public class Compra {
     Cliente cliente;
     ArrayList<Producto> productos;
 
-    // Constructor
+    
     public Compra(int numero, String fecha, Cliente cliente) {
 
         this.numero = numero;
